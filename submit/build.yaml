@@ -1,1 +1,292 @@
-# cloudformation solution goes here
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  DS5220 Data Project 1 — Full anomaly detection stack:
+  EC2 (Ubuntu 24.04 LTS), S3 bucket, IAM role + instance profile,
+  Security Group, Elastic IP, SNS topic ds5220-dp1 with HTTP subscription
+  to /notify, and S3 event notification on raw/*.csv → SNS.
+
+# Parameters
+Parameters:
+
+  YourIP:
+    Type: String
+    Description: >
+      Your public IP address in CIDR notation for SSH access.
+    # REPLACE the default with your real IP before deploying, e.g. 1.2.3.4/32
+    Default: "199.111.224.3/32"
+
+  GitHubRepoURL:
+    Type: String
+    Description: "Full HTTPS URL of your forked anomaly-detection repository"
+    # REPLACE with your own fork URL
+    Default: "https://github.com/VinithJ12/anomaly-detection.git"
+
+  KeyPairName:
+    Type: AWS::EC2::KeyPair::KeyName
+    Description: "Name of an existing EC2 Key Pair to enable SSH access"
+
+# Resources
+Resources:
+
+  
+  # SNS Topic — must be created BEFORE the S3 bucket so the bucket can
+  # reference it in its NotificationConfiguration.
+  
+  SNSTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: "ds5220-dp1"
+
+  
+  # SNS Topic Policy — grants S3 permission to publish events to the topic.
+  # This must exist BEFORE the S3 bucket so CloudFormation does not attempt to
+  # configure the bucket notification before S3 has publish rights.
+  
+
+  SNSTopicPolicy:
+    Type: AWS::SNS::TopicPolicy
+    DependsOn: SNSTopic
+    Properties:
+      Topics:
+        - !Ref SNSTopic
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Sid: AllowS3ToPublish
+            Effect: Allow
+            Principal:
+              Service: s3.amazonaws.com
+            Action: sns:Publish
+            Resource: !Ref SNSTopic
+            Condition:
+              ArnLike:
+                # Scope this permission to only OUR bucket — defense in depth.
+                aws:SourceArn: !Sub "arn:aws:s3:::ds5220-anomaly-${AWS::StackName}"
+
+  
+  # S3 Bucket
+  # DependsOn SNSTopicPolicy ensures the topic policy exists before CloudFormation
+  # tries to wire up the event notification (otherwise S3 will reject the config
+  # with an "Unable to validate SNS topic" error).
+  # DeletionPolicy: Retain — keeps the bucket when the stack is deleted because
+  # CloudFormation cannot delete a non-empty bucket.
+  
+  AnomalyBucket:
+    Type: AWS::S3::Bucket
+    DependsOn: SNSTopicPolicy
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: !Sub "ds5220-anomaly-${AWS::StackName}"
+      NotificationConfiguration:
+        TopicConfigurations:
+          - Event: "s3:ObjectCreated:*"
+            Filter:
+              S3Key:
+                Rules:
+                  # Only trigger on files uploaded to the raw/ prefix …
+                  - Name: prefix
+                    Value: "raw/"
+                  # … and only for .csv files.
+                  # This prevents a recursion loop where writing a scored CSV
+                  # under processed/ would re-trigger the pipeline.
+                  - Name: suffix
+                    Value: ".csv"
+            Topic: !Ref SNSTopic
+
+
+  # IAM Role for EC2 — least-privilege S3 access to this stack's bucket only
+  EC2Role:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "ds5220-ec2-role-${AWS::StackName}"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ec2.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: S3BucketAccess
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  # Object-level operations used by the application:
+                  - s3:GetObject      # download raw CSVs and baseline.json
+                  - s3:PutObject      # write scored CSVs, summaries, baseline, log
+                  - s3:DeleteObject   # not currently used but prudent for cleanup
+                  # Bucket-level operations:
+                  - s3:ListBucket     # paginate processed/ and state/ prefixes
+                  - s3:GetBucketLocation  # required by some SDK paginators
+                Resource:
+                  # Bucket ARN (for ListBucket / GetBucketLocation)
+                  - !Sub "arn:aws:s3:::ds5220-anomaly-${AWS::StackName}"
+                  # Object ARN (for GetObject / PutObject / DeleteObject)
+                  - !Sub "arn:aws:s3:::ds5220-anomaly-${AWS::StackName}/*"
+
+  # IAM Instance Profile — attaches the role to the EC2 instance
+  EC2InstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Roles:
+        - !Ref EC2Role
+
+  
+  # Security Group
+
+  AnomalySecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: "SSH from my IP; FastAPI port 8000 from anywhere"
+      SecurityGroupIngress:
+        # SSH — restricted to your specific IP for security
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: !Ref YourIP
+        # FastAPI — open to the internet so SNS can reach /notify and
+        # team members can query the API endpoints
+        - IpProtocol: tcp
+          FromPort: 8000
+          ToPort: 8000
+          CidrIp: "0.0.0.0/0"
+
+  # EC2 Instance — Ubuntu 24.04 LTS, t3.micro, 16 GB boot volume
+  AnomalyInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      # Ubuntu 24.04 LTS (Noble) — us-east-1
+      # Update this AMI ID if you are deploying to a different region.
+      ImageId: "ami-0c7217cdde317cfec"
+      InstanceType: t3.micro
+      KeyName: !Ref KeyPairName
+      IamInstanceProfile: !Ref EC2InstanceProfile
+      SecurityGroups:
+        - !Ref AnomalySecurityGroup
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: 16
+            VolumeType: gp3
+            DeleteOnTermination: true
+      UserData:
+        # The !Sub block lets us reference CloudFormation resources and
+        # pseudo-parameters (like AWS::StackName) directly inside the script.
+        Fn::Base64:
+          !Sub |
+            #!/bin/bash
+            set -e
+            exec > /var/log/userdata.log 2>&1   # capture all bootstrap output
+
+            # ── System packages ──────────────────────────────────────────────
+            apt-get update -y
+            apt-get install -y git python3 python3-pip python3-venv
+
+            # ── Environment variable: BUCKET_NAME ───────────────────────────
+            # Export for use within this bootstrap script immediately:
+            export BUCKET_NAME="ds5220-anomaly-${AWS::StackName}"
+
+            # Set globally for all future logins and reboots via /etc/environment:
+            echo 'BUCKET_NAME="ds5220-anomaly-${AWS::StackName}"' >> /etc/environment
+
+            # ── Clone your forked repository ─────────────────────────────────
+            git clone ${GitHubRepoURL} /opt/anomaly-detection
+
+            # ── Create virtual environment and install dependencies ───────────
+            python3 -m venv /opt/anomaly-detection/venv
+            /opt/anomaly-detection/venv/bin/pip install --upgrade pip
+            /opt/anomaly-detection/venv/bin/pip install \
+              -r /opt/anomaly-detection/requirements.txt
+
+            # ── Pre-create log file with open permissions ────────────────────
+            # The service runs as ubuntu but writes to /var/log/; pre-creating
+            # with world-writable permissions avoids PermissionError on first run.
+            touch /var/log/anomaly_detection.log
+            chmod 666 /var/log/anomaly_detection.log
+
+            # ── systemd service unit ─────────────────────────────────────────
+            # Writing the heredoc without indentation so that the tab characters
+            # in the YAML do not end up inside the unit file.
+            cat > /etc/systemd/system/anomaly-detection.service << 'UNIT'
+            [Unit]
+            Description=Anomaly Detection FastAPI Service
+            After=network-online.target
+            Wants=network-online.target
+
+            [Service]
+            User=ubuntu
+            WorkingDirectory=/opt/anomaly-detection
+            Environment="BUCKET_NAME=ds5220-anomaly-${AWS::StackName}"
+            ExecStart=/opt/anomaly-detection/venv/bin/fastapi run \
+              /opt/anomaly-detection/app.py \
+              --host 0.0.0.0 \
+              --port 8000
+            Restart=on-failure
+            RestartSec=10
+            StandardOutput=journal
+            StandardError=journal
+
+            [Install]
+            WantedBy=multi-user.target
+            UNIT
+
+            # ── Enable and start the service ─────────────────────────────────
+            systemctl daemon-reload
+            systemctl enable anomaly-detection
+            systemctl start anomaly-detection
+
+  
+  # Elastic IP — stable public IP that survives instance stop/start cycles.
+  # SNS uses this as the subscription endpoint so the ARN never needs updating.
+  AnomalyEIP:
+    Type: AWS::EC2::EIP
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref AnomalyInstance
+
+  # SNS HTTP Subscription
+  # The Endpoint uses !Sub with the EIP so it is always correct after deployment.
+  # SNS will send a SubscriptionConfirmation POST to /notify immediately; the
+  # FastAPI app confirms it automatically via the SubscribeURL handshake.
+  SNSSubscription:
+    Type: AWS::SNS::Subscription
+    DependsOn: AnomalyEIP
+    Properties:
+      TopicArn: !Ref SNSTopic
+      Protocol: http
+      Endpoint: !Sub "http://${AnomalyEIP}:8000/notify"
+
+# Outputs
+Outputs:
+
+  InstancePublicIP:
+    Description: "Elastic IP address of the EC2 instance"
+    Value: !Ref AnomalyEIP
+
+  APIEndpoint:
+    Description: "FastAPI base URL"
+    Value: !Sub "http://${AnomalyEIP}:8000"
+
+  HealthCheckURL:
+    Description: "Liveness check endpoint"
+    Value: !Sub "http://${AnomalyEIP}:8000/health"
+
+  DocsURL:
+    Description: "Auto-generated API documentation"
+    Value: !Sub "http://${AnomalyEIP}:8000/docs"
+
+  BucketName:
+    Description: "S3 bucket used by the application"
+    Value: !Ref AnomalyBucket
+
+  SNSTopicArn:
+    Description: "ARN of the SNS topic ds5220-dp1"
+    Value: !Ref SNSTopic
+
+  SNSSubscriptionNote:
+    Description: "After deploying, verify the SNS subscription status in the console or via CLI"
+    Value: !Sub >
+      aws sns list-subscriptions-by-topic
+      --topic-arn ${SNSTopic}
