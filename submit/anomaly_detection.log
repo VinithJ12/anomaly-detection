@@ -1,0 +1,1264 @@
+2026-03-10 02:02:38,200 [INFO] Started server process [3146]
+2026-03-10 02:02:38,201 [INFO] Waiting for application startup.
+2026-03-10 02:02:38,202 [INFO] Application startup complete.
+2026-03-10 02:02:38,204 [INFO] Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-03-10 02:22:40,483 [INFO] Received SNS message type: SubscriptionConfirmation
+2026-03-10 02:22:40,679 [INFO] SNS subscription confirmed successfully.
+2026-03-10 02:26:28,277 [INFO] Received SNS message type: Notification
+2026-03-10 02:26:28,277 [INFO] New file arrival detected: raw/sensors_20260310T022627.csv — queuing for processing.
+2026-03-10 02:26:28,278 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T022627.csv ---
+2026-03-10 02:26:28,393 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:26:28,501 [INFO] No existing baseline found — starting fresh.
+2026-03-10 02:26:28,501 [INFO] Baseline loaded from S3.
+2026-03-10 02:26:28,502 [INFO] Channel 'temperature' updated: count=100, mean=22.053, std=1.7678
+2026-03-10 02:26:28,502 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:26:28,503 [INFO] Channel 'humidity' updated: count=100, mean=54.6372, std=6.37
+2026-03-10 02:26:28,503 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:26:28,503 [INFO] Channel 'pressure' updated: count=100, mean=1012.8939, std=3.1475
+2026-03-10 02:26:28,503 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:26:28,504 [INFO] Channel 'wind_speed' updated: count=100, mean=9.5126, std=3.2861
+2026-03-10 02:26:28,504 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:26:28,681 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 02:26:28,719 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T022627.csv
+2026-03-10 02:26:28,750 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:26:28,751 [INFO] Baseline saved to S3.
+2026-03-10 02:26:28,779 [INFO] Log file synced to S3.
+2026-03-10 02:26:28,808 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T022627_summary.json
+2026-03-10 02:27:28,676 [INFO] Received SNS message type: Notification
+2026-03-10 02:27:28,676 [INFO] New file arrival detected: raw/sensors_20260310T022727.csv — queuing for processing.
+2026-03-10 02:27:28,678 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T022727.csv ---
+2026-03-10 02:27:28,822 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:27:28,936 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:27:28,936 [INFO] Baseline loaded from S3.
+2026-03-10 02:27:28,937 [INFO] Channel 'temperature' updated: count=200, mean=21.9188, std=1.9724
+2026-03-10 02:27:28,937 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:27:28,937 [INFO] Channel 'humidity' updated: count=200, mean=54.9253, std=5.9201
+2026-03-10 02:27:28,937 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:27:28,938 [INFO] Channel 'pressure' updated: count=200, mean=1012.7184, std=3.6785
+2026-03-10 02:27:28,938 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:27:28,938 [INFO] Channel 'wind_speed' updated: count=200, mean=9.7428, std=3.2345
+2026-03-10 02:27:28,938 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:27:29,105 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 02:27:29,143 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T022727.csv
+2026-03-10 02:27:29,181 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:27:29,182 [INFO] Baseline saved to S3.
+2026-03-10 02:27:29,213 [INFO] Log file synced to S3.
+2026-03-10 02:27:29,247 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T022727_summary.json
+2026-03-10 02:35:52,354 [INFO] Received SNS message type: Notification
+2026-03-10 02:35:52,354 [INFO] New file arrival detected: raw/sensors_20260310T023551.csv — queuing for processing.
+2026-03-10 02:35:52,355 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T023551.csv ---
+2026-03-10 02:35:52,470 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:35:52,597 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:35:52,597 [INFO] Baseline loaded from S3.
+2026-03-10 02:35:52,598 [INFO] Channel 'temperature' updated: count=300, mean=21.9963, std=1.959
+2026-03-10 02:35:52,598 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:35:52,598 [INFO] Channel 'humidity' updated: count=300, mean=54.7748, std=5.7118
+2026-03-10 02:35:52,598 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:35:52,599 [INFO] Channel 'pressure' updated: count=300, mean=1012.5941, std=4.1728
+2026-03-10 02:35:52,599 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:35:52,599 [INFO] Channel 'wind_speed' updated: count=300, mean=9.9045, std=3.0278
+2026-03-10 02:35:52,599 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:35:52,767 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 02:35:52,807 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T023551.csv
+2026-03-10 02:35:52,838 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:35:52,839 [INFO] Baseline saved to S3.
+2026-03-10 02:35:52,871 [INFO] Log file synced to S3.
+2026-03-10 02:35:52,910 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T023551_summary.json
+2026-03-10 02:36:52,887 [INFO] Received SNS message type: Notification
+2026-03-10 02:36:52,887 [INFO] New file arrival detected: raw/sensors_20260310T023651.csv — queuing for processing.
+2026-03-10 02:36:52,889 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T023651.csv ---
+2026-03-10 02:36:53,012 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:36:53,152 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:36:53,152 [INFO] Baseline loaded from S3.
+2026-03-10 02:36:53,153 [INFO] Channel 'temperature' updated: count=400, mean=22.0159, std=1.8442
+2026-03-10 02:36:53,153 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:36:53,153 [INFO] Channel 'humidity' updated: count=400, mean=54.8908, std=5.587
+2026-03-10 02:36:53,154 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:36:53,154 [INFO] Channel 'pressure' updated: count=400, mean=1012.5513, std=4.2688
+2026-03-10 02:36:53,154 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:36:53,155 [INFO] Channel 'wind_speed' updated: count=400, mean=10.01, std=4.2484
+2026-03-10 02:36:53,155 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:36:53,319 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 02:36:53,353 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T023651.csv
+2026-03-10 02:36:53,386 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:36:53,386 [INFO] Baseline saved to S3.
+2026-03-10 02:36:53,415 [INFO] Log file synced to S3.
+2026-03-10 02:36:53,446 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T023651_summary.json
+2026-03-10 02:37:53,327 [INFO] Received SNS message type: Notification
+2026-03-10 02:37:53,327 [INFO] New file arrival detected: raw/sensors_20260310T023752.csv — queuing for processing.
+2026-03-10 02:37:53,328 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T023752.csv ---
+2026-03-10 02:37:53,435 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:37:53,670 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:37:53,670 [INFO] Baseline loaded from S3.
+2026-03-10 02:37:53,671 [INFO] Channel 'temperature' updated: count=500, mean=22.0239, std=1.8031
+2026-03-10 02:37:53,671 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:37:53,671 [INFO] Channel 'humidity' updated: count=500, mean=54.958, std=5.4908
+2026-03-10 02:37:53,671 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:37:53,672 [INFO] Channel 'pressure' updated: count=500, mean=1012.7114, std=4.3778
+2026-03-10 02:37:53,672 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:37:53,672 [INFO] Channel 'wind_speed' updated: count=500, mean=10.021, std=4.0213
+2026-03-10 02:37:53,672 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:37:53,838 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 02:37:53,870 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T023752.csv
+2026-03-10 02:37:53,899 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:37:53,899 [INFO] Baseline saved to S3.
+2026-03-10 02:37:53,927 [INFO] Log file synced to S3.
+2026-03-10 02:37:53,958 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T023752_summary.json
+2026-03-10 02:38:53,809 [INFO] Received SNS message type: Notification
+2026-03-10 02:38:53,809 [INFO] New file arrival detected: raw/sensors_20260310T023852.csv — queuing for processing.
+2026-03-10 02:38:53,810 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T023852.csv ---
+2026-03-10 02:38:53,923 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:38:54,059 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:38:54,060 [INFO] Baseline loaded from S3.
+2026-03-10 02:38:54,060 [INFO] Channel 'temperature' updated: count=600, mean=21.999, std=1.7591
+2026-03-10 02:38:54,060 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:38:54,061 [INFO] Channel 'humidity' updated: count=600, mean=54.9663, std=5.4037
+2026-03-10 02:38:54,061 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:38:54,061 [INFO] Channel 'pressure' updated: count=600, mean=1012.9582, std=4.6005
+2026-03-10 02:38:54,062 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:38:54,062 [INFO] Channel 'wind_speed' updated: count=600, mean=10.0259, std=3.9183
+2026-03-10 02:38:54,062 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:38:54,227 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 02:38:54,261 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T023852.csv
+2026-03-10 02:38:54,291 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:38:54,292 [INFO] Baseline saved to S3.
+2026-03-10 02:38:54,322 [INFO] Log file synced to S3.
+2026-03-10 02:38:54,351 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T023852_summary.json
+2026-03-10 02:39:54,156 [INFO] Received SNS message type: Notification
+2026-03-10 02:39:54,156 [INFO] New file arrival detected: raw/sensors_20260310T023952.csv — queuing for processing.
+2026-03-10 02:39:54,157 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T023952.csv ---
+2026-03-10 02:39:54,264 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:39:54,384 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:39:54,384 [INFO] Baseline loaded from S3.
+2026-03-10 02:39:54,385 [INFO] Channel 'temperature' updated: count=700, mean=22.0565, std=1.8297
+2026-03-10 02:39:54,385 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:39:54,386 [INFO] Channel 'humidity' updated: count=700, mean=54.8855, std=5.5387
+2026-03-10 02:39:54,386 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:39:54,386 [INFO] Channel 'pressure' updated: count=700, mean=1012.9573, std=4.4642
+2026-03-10 02:39:54,386 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:39:54,387 [INFO] Channel 'wind_speed' updated: count=700, mean=10.0269, std=3.762
+2026-03-10 02:39:54,387 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:39:54,551 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 02:39:54,582 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T023952.csv
+2026-03-10 02:39:54,617 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:39:54,618 [INFO] Baseline saved to S3.
+2026-03-10 02:39:54,649 [INFO] Log file synced to S3.
+2026-03-10 02:39:54,679 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T023952_summary.json
+2026-03-10 02:40:53,939 [INFO] Received SNS message type: Notification
+2026-03-10 02:40:53,939 [INFO] New file arrival detected: raw/sensors_20260310T024052.csv — queuing for processing.
+2026-03-10 02:40:53,940 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T024052.csv ---
+2026-03-10 02:40:54,048 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:40:54,157 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:40:54,157 [INFO] Baseline loaded from S3.
+2026-03-10 02:40:54,158 [INFO] Channel 'temperature' updated: count=800, mean=22.0812, std=1.8377
+2026-03-10 02:40:54,158 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:40:54,158 [INFO] Channel 'humidity' updated: count=800, mean=55.0858, std=5.9116
+2026-03-10 02:40:54,158 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:40:54,159 [INFO] Channel 'pressure' updated: count=800, mean=1012.9039, std=4.2788
+2026-03-10 02:40:54,159 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:40:54,159 [INFO] Channel 'wind_speed' updated: count=800, mean=10.0097, std=3.7681
+2026-03-10 02:40:54,159 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:40:54,324 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 02:40:54,354 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T024052.csv
+2026-03-10 02:40:54,383 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:40:54,383 [INFO] Baseline saved to S3.
+2026-03-10 02:40:54,410 [INFO] Log file synced to S3.
+2026-03-10 02:40:54,438 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T024052_summary.json
+2026-03-10 02:41:54,239 [INFO] Received SNS message type: Notification
+2026-03-10 02:41:54,239 [INFO] New file arrival detected: raw/sensors_20260310T024153.csv — queuing for processing.
+2026-03-10 02:41:54,241 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T024153.csv ---
+2026-03-10 02:41:54,351 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:41:54,463 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:41:54,463 [INFO] Baseline loaded from S3.
+2026-03-10 02:41:54,463 [INFO] Channel 'temperature' updated: count=900, mean=22.0845, std=1.8041
+2026-03-10 02:41:54,464 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:41:54,464 [INFO] Channel 'humidity' updated: count=900, mean=55.0342, std=5.8642
+2026-03-10 02:41:54,464 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:41:54,464 [INFO] Channel 'pressure' updated: count=900, mean=1012.9034, std=4.2206
+2026-03-10 02:41:54,465 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:41:54,465 [INFO] Channel 'wind_speed' updated: count=900, mean=10.0965, std=3.809
+2026-03-10 02:41:54,465 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:41:54,630 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 02:41:54,658 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T024153.csv
+2026-03-10 02:41:54,686 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:41:54,687 [INFO] Baseline saved to S3.
+2026-03-10 02:41:54,715 [INFO] Log file synced to S3.
+2026-03-10 02:41:54,745 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T024153_summary.json
+2026-03-10 02:42:54,736 [INFO] Received SNS message type: Notification
+2026-03-10 02:42:54,737 [INFO] New file arrival detected: raw/sensors_20260310T024253.csv — queuing for processing.
+2026-03-10 02:42:54,738 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T024253.csv ---
+2026-03-10 02:42:54,843 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:42:54,963 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:42:54,963 [INFO] Baseline loaded from S3.
+2026-03-10 02:42:54,964 [INFO] Channel 'temperature' updated: count=1000, mean=22.0585, std=1.8391
+2026-03-10 02:42:54,964 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:42:54,964 [INFO] Channel 'humidity' updated: count=1000, mean=54.9713, std=5.852
+2026-03-10 02:42:54,964 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:42:54,965 [INFO] Channel 'pressure' updated: count=1000, mean=1012.9348, std=4.2771
+2026-03-10 02:42:54,965 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:42:54,965 [INFO] Channel 'wind_speed' updated: count=1000, mean=10.0979, std=3.7008
+2026-03-10 02:42:54,965 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:42:55,129 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 02:42:55,161 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T024253.csv
+2026-03-10 02:42:55,189 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:42:55,189 [INFO] Baseline saved to S3.
+2026-03-10 02:42:55,221 [INFO] Log file synced to S3.
+2026-03-10 02:42:55,251 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T024253_summary.json
+2026-03-10 02:43:54,264 [INFO] Received SNS message type: Notification
+2026-03-10 02:43:54,264 [INFO] New file arrival detected: raw/sensors_20260310T024353.csv — queuing for processing.
+2026-03-10 02:43:54,266 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T024353.csv ---
+2026-03-10 02:43:54,371 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:43:54,474 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:43:54,474 [INFO] Baseline loaded from S3.
+2026-03-10 02:43:54,475 [INFO] Channel 'temperature' updated: count=1100, mean=22.0426, std=1.8785
+2026-03-10 02:43:54,475 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:43:54,476 [INFO] Channel 'humidity' updated: count=1100, mean=54.9993, std=5.886
+2026-03-10 02:43:54,476 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:43:54,476 [INFO] Channel 'pressure' updated: count=1100, mean=1012.9819, std=4.2316
+2026-03-10 02:43:54,476 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:43:54,477 [INFO] Channel 'wind_speed' updated: count=1100, mean=10.0932, std=3.6175
+2026-03-10 02:43:54,477 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:43:54,640 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 02:43:54,673 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T024353.csv
+2026-03-10 02:43:54,698 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:43:54,699 [INFO] Baseline saved to S3.
+2026-03-10 02:43:54,727 [INFO] Log file synced to S3.
+2026-03-10 02:43:54,754 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T024353_summary.json
+2026-03-10 02:44:54,784 [INFO] Received SNS message type: Notification
+2026-03-10 02:44:54,784 [INFO] New file arrival detected: raw/sensors_20260310T024453.csv — queuing for processing.
+2026-03-10 02:44:54,786 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T024453.csv ---
+2026-03-10 02:44:54,888 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:44:54,994 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:44:54,994 [INFO] Baseline loaded from S3.
+2026-03-10 02:44:54,995 [INFO] Channel 'temperature' updated: count=1200, mean=22.0104, std=1.8785
+2026-03-10 02:44:54,995 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:44:54,996 [INFO] Channel 'humidity' updated: count=1200, mean=54.9565, std=5.9518
+2026-03-10 02:44:54,996 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:44:54,996 [INFO] Channel 'pressure' updated: count=1200, mean=1012.9973, std=4.26
+2026-03-10 02:44:54,996 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:44:54,997 [INFO] Channel 'wind_speed' updated: count=1200, mean=10.0703, std=3.5457
+2026-03-10 02:44:54,997 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:44:55,161 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 02:44:55,195 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T024453.csv
+2026-03-10 02:44:55,230 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:44:55,230 [INFO] Baseline saved to S3.
+2026-03-10 02:44:55,256 [INFO] Log file synced to S3.
+2026-03-10 02:44:55,295 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T024453_summary.json
+2026-03-10 02:45:55,125 [INFO] Received SNS message type: Notification
+2026-03-10 02:45:55,126 [INFO] New file arrival detected: raw/sensors_20260310T024553.csv — queuing for processing.
+2026-03-10 02:45:55,127 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T024553.csv ---
+2026-03-10 02:45:55,277 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:45:55,409 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:45:55,409 [INFO] Baseline loaded from S3.
+2026-03-10 02:45:55,410 [INFO] Channel 'temperature' updated: count=1300, mean=22.0099, std=1.8392
+2026-03-10 02:45:55,410 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:45:55,410 [INFO] Channel 'humidity' updated: count=1300, mean=54.9224, std=6.2905
+2026-03-10 02:45:55,410 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:45:55,411 [INFO] Channel 'pressure' updated: count=1300, mean=1012.9849, std=4.209
+2026-03-10 02:45:55,411 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:45:55,411 [INFO] Channel 'wind_speed' updated: count=1300, mean=10.0755, std=3.4945
+2026-03-10 02:45:55,411 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:45:55,575 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 02:45:55,608 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T024553.csv
+2026-03-10 02:45:55,638 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:45:55,638 [INFO] Baseline saved to S3.
+2026-03-10 02:45:55,668 [INFO] Log file synced to S3.
+2026-03-10 02:45:55,696 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T024553_summary.json
+2026-03-10 02:46:55,465 [INFO] Received SNS message type: Notification
+2026-03-10 02:46:55,465 [INFO] New file arrival detected: raw/sensors_20260310T024654.csv — queuing for processing.
+2026-03-10 02:46:55,467 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T024654.csv ---
+2026-03-10 02:46:55,584 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:46:55,699 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:46:55,700 [INFO] Baseline loaded from S3.
+2026-03-10 02:46:55,700 [INFO] Channel 'temperature' updated: count=1400, mean=22.0095, std=1.827
+2026-03-10 02:46:55,700 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:46:55,701 [INFO] Channel 'humidity' updated: count=1400, mean=54.9272, std=6.2503
+2026-03-10 02:46:55,701 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:46:55,701 [INFO] Channel 'pressure' updated: count=1400, mean=1012.9386, std=4.2268
+2026-03-10 02:46:55,702 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:46:55,702 [INFO] Channel 'wind_speed' updated: count=1400, mean=10.082, std=3.4814
+2026-03-10 02:46:55,702 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:46:55,867 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 02:46:55,913 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T024654.csv
+2026-03-10 02:46:55,938 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:46:55,938 [INFO] Baseline saved to S3.
+2026-03-10 02:46:55,966 [INFO] Log file synced to S3.
+2026-03-10 02:46:55,991 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T024654_summary.json
+2026-03-10 02:47:55,216 [INFO] Received SNS message type: Notification
+2026-03-10 02:47:55,216 [INFO] New file arrival detected: raw/sensors_20260310T024754.csv — queuing for processing.
+2026-03-10 02:47:55,218 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T024754.csv ---
+2026-03-10 02:47:55,329 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:47:55,442 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:47:55,442 [INFO] Baseline loaded from S3.
+2026-03-10 02:47:55,443 [INFO] Channel 'temperature' updated: count=1500, mean=22.0205, std=1.8112
+2026-03-10 02:47:55,443 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:47:55,443 [INFO] Channel 'humidity' updated: count=1500, mean=54.9192, std=6.3681
+2026-03-10 02:47:55,444 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:47:55,444 [INFO] Channel 'pressure' updated: count=1500, mean=1012.971, std=4.3076
+2026-03-10 02:47:55,444 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:47:55,444 [INFO] Channel 'wind_speed' updated: count=1500, mean=10.0522, std=3.4166
+2026-03-10 02:47:55,444 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:47:55,608 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 02:47:55,663 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T024754.csv
+2026-03-10 02:47:55,689 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:47:55,689 [INFO] Baseline saved to S3.
+2026-03-10 02:47:55,719 [INFO] Log file synced to S3.
+2026-03-10 02:47:55,752 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T024754_summary.json
+2026-03-10 02:48:55,717 [INFO] Received SNS message type: Notification
+2026-03-10 02:48:55,717 [INFO] New file arrival detected: raw/sensors_20260310T024854.csv — queuing for processing.
+2026-03-10 02:48:55,719 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T024854.csv ---
+2026-03-10 02:48:55,825 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:48:55,952 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:48:55,952 [INFO] Baseline loaded from S3.
+2026-03-10 02:48:55,953 [INFO] Channel 'temperature' updated: count=1600, mean=22.011, std=1.7946
+2026-03-10 02:48:55,953 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:48:55,954 [INFO] Channel 'humidity' updated: count=1600, mean=54.8959, std=6.5206
+2026-03-10 02:48:55,954 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:48:55,954 [INFO] Channel 'pressure' updated: count=1600, mean=1012.9818, std=4.2234
+2026-03-10 02:48:55,954 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:48:55,955 [INFO] Channel 'wind_speed' updated: count=1600, mean=10.0227, std=3.3944
+2026-03-10 02:48:55,955 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:48:56,118 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 02:48:56,148 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T024854.csv
+2026-03-10 02:48:56,178 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:48:56,178 [INFO] Baseline saved to S3.
+2026-03-10 02:48:56,212 [INFO] Log file synced to S3.
+2026-03-10 02:48:56,240 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T024854_summary.json
+2026-03-10 02:49:55,899 [INFO] Received SNS message type: Notification
+2026-03-10 02:49:55,900 [INFO] New file arrival detected: raw/sensors_20260310T024954.csv — queuing for processing.
+2026-03-10 02:49:55,901 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T024954.csv ---
+2026-03-10 02:49:56,025 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:49:56,180 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:49:56,180 [INFO] Baseline loaded from S3.
+2026-03-10 02:49:56,181 [INFO] Channel 'temperature' updated: count=1700, mean=22.0111, std=1.7861
+2026-03-10 02:49:56,181 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:49:56,182 [INFO] Channel 'humidity' updated: count=1700, mean=54.901, std=6.4668
+2026-03-10 02:49:56,182 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:49:56,182 [INFO] Channel 'pressure' updated: count=1700, mean=1013.0041, std=4.2432
+2026-03-10 02:49:56,182 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:49:56,183 [INFO] Channel 'wind_speed' updated: count=1700, mean=10.0317, std=3.3624
+2026-03-10 02:49:56,183 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:49:56,350 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 02:49:56,380 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T024954.csv
+2026-03-10 02:49:56,411 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:49:56,412 [INFO] Baseline saved to S3.
+2026-03-10 02:49:56,440 [INFO] Log file synced to S3.
+2026-03-10 02:49:56,466 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T024954_summary.json
+2026-03-10 02:50:56,481 [INFO] Received SNS message type: Notification
+2026-03-10 02:50:56,481 [INFO] New file arrival detected: raw/sensors_20260310T025055.csv — queuing for processing.
+2026-03-10 02:50:56,483 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T025055.csv ---
+2026-03-10 02:50:56,596 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:50:56,708 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:50:56,708 [INFO] Baseline loaded from S3.
+2026-03-10 02:50:56,709 [INFO] Channel 'temperature' updated: count=1800, mean=21.9981, std=1.7721
+2026-03-10 02:50:56,709 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:50:56,709 [INFO] Channel 'humidity' updated: count=1800, mean=54.8999, std=6.4738
+2026-03-10 02:50:56,709 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:50:56,710 [INFO] Channel 'pressure' updated: count=1800, mean=1013.0199, std=4.2712
+2026-03-10 02:50:56,710 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:50:56,710 [INFO] Channel 'wind_speed' updated: count=1800, mean=10.0258, std=3.3668
+2026-03-10 02:50:56,710 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:50:56,874 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 02:50:56,905 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T025055.csv
+2026-03-10 02:50:56,932 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:50:56,932 [INFO] Baseline saved to S3.
+2026-03-10 02:50:56,960 [INFO] Log file synced to S3.
+2026-03-10 02:50:56,990 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T025055_summary.json
+2026-03-10 02:51:56,015 [INFO] Received SNS message type: Notification
+2026-03-10 02:51:56,015 [INFO] New file arrival detected: raw/sensors_20260310T025155.csv — queuing for processing.
+2026-03-10 02:51:56,017 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T025155.csv ---
+2026-03-10 02:51:56,128 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:51:56,235 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:51:56,235 [INFO] Baseline loaded from S3.
+2026-03-10 02:51:56,236 [INFO] Channel 'temperature' updated: count=1900, mean=22.0023, std=1.7652
+2026-03-10 02:51:56,236 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:51:56,237 [INFO] Channel 'humidity' updated: count=1900, mean=54.9265, std=6.5719
+2026-03-10 02:51:56,237 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:51:56,237 [INFO] Channel 'pressure' updated: count=1900, mean=1013.007, std=4.2753
+2026-03-10 02:51:56,237 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:51:56,238 [INFO] Channel 'wind_speed' updated: count=1900, mean=10.0257, std=3.3286
+2026-03-10 02:51:56,238 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:51:56,404 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 02:51:56,432 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T025155.csv
+2026-03-10 02:51:56,459 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:51:56,459 [INFO] Baseline saved to S3.
+2026-03-10 02:51:56,489 [INFO] Log file synced to S3.
+2026-03-10 02:51:56,516 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T025155_summary.json
+2026-03-10 02:52:56,389 [INFO] Received SNS message type: Notification
+2026-03-10 02:52:56,389 [INFO] New file arrival detected: raw/sensors_20260310T025255.csv — queuing for processing.
+2026-03-10 02:52:56,391 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T025255.csv ---
+2026-03-10 02:52:56,503 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:52:56,611 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:52:56,611 [INFO] Baseline loaded from S3.
+2026-03-10 02:52:56,612 [INFO] Channel 'temperature' updated: count=2000, mean=22.0151, std=1.7692
+2026-03-10 02:52:56,612 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:52:56,612 [INFO] Channel 'humidity' updated: count=2000, mean=54.9478, std=6.5105
+2026-03-10 02:52:56,612 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:52:56,613 [INFO] Channel 'pressure' updated: count=2000, mean=1013.0201, std=4.2574
+2026-03-10 02:52:56,613 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:52:56,613 [INFO] Channel 'wind_speed' updated: count=2000, mean=10.0333, std=3.3256
+2026-03-10 02:52:56,613 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:52:56,778 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 02:52:56,813 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T025255.csv
+2026-03-10 02:52:56,841 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:52:56,841 [INFO] Baseline saved to S3.
+2026-03-10 02:52:56,895 [INFO] Log file synced to S3.
+2026-03-10 02:52:56,924 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T025255_summary.json
+2026-03-10 02:53:56,709 [INFO] Received SNS message type: Notification
+2026-03-10 02:53:56,710 [INFO] New file arrival detected: raw/sensors_20260310T025355.csv — queuing for processing.
+2026-03-10 02:53:56,711 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T025355.csv ---
+2026-03-10 02:53:56,819 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:53:56,926 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:53:56,926 [INFO] Baseline loaded from S3.
+2026-03-10 02:53:56,927 [INFO] Channel 'temperature' updated: count=2100, mean=21.9973, std=1.7922
+2026-03-10 02:53:56,927 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:53:56,928 [INFO] Channel 'humidity' updated: count=2100, mean=54.9362, std=6.5141
+2026-03-10 02:53:56,928 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:53:56,928 [INFO] Channel 'pressure' updated: count=2100, mean=1012.9829, std=4.25
+2026-03-10 02:53:56,928 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:53:56,928 [INFO] Channel 'wind_speed' updated: count=2100, mean=10.0317, std=3.2941
+2026-03-10 02:53:56,929 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:53:57,091 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 02:53:57,157 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T025355.csv
+2026-03-10 02:53:57,183 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:53:57,183 [INFO] Baseline saved to S3.
+2026-03-10 02:53:57,217 [INFO] Log file synced to S3.
+2026-03-10 02:53:57,243 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T025355_summary.json
+2026-03-10 02:54:56,652 [INFO] Received SNS message type: Notification
+2026-03-10 02:54:56,652 [INFO] New file arrival detected: raw/sensors_20260310T025455.csv — queuing for processing.
+2026-03-10 02:54:56,654 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T025455.csv ---
+2026-03-10 02:54:56,775 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:54:56,899 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:54:56,899 [INFO] Baseline loaded from S3.
+2026-03-10 02:54:56,900 [INFO] Channel 'temperature' updated: count=2200, mean=21.9901, std=1.7741
+2026-03-10 02:54:56,900 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:54:56,901 [INFO] Channel 'humidity' updated: count=2200, mean=54.8945, std=6.5197
+2026-03-10 02:54:56,901 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:54:56,901 [INFO] Channel 'pressure' updated: count=2200, mean=1013.0208, std=4.2229
+2026-03-10 02:54:56,901 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:54:56,902 [INFO] Channel 'wind_speed' updated: count=2200, mean=10.0068, std=3.2738
+2026-03-10 02:54:56,902 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:54:57,066 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 02:54:57,126 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T025455.csv
+2026-03-10 02:54:57,216 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:54:57,217 [INFO] Baseline saved to S3.
+2026-03-10 02:54:57,267 [INFO] Log file synced to S3.
+2026-03-10 02:54:57,302 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T025455_summary.json
+2026-03-10 02:55:56,918 [INFO] Received SNS message type: Notification
+2026-03-10 02:55:56,919 [INFO] New file arrival detected: raw/sensors_20260310T025556.csv — queuing for processing.
+2026-03-10 02:55:56,920 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T025556.csv ---
+2026-03-10 02:55:57,027 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:55:57,130 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:55:57,131 [INFO] Baseline loaded from S3.
+2026-03-10 02:55:57,131 [INFO] Channel 'temperature' updated: count=2300, mean=21.9891, std=1.7608
+2026-03-10 02:55:57,131 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:55:57,132 [INFO] Channel 'humidity' updated: count=2300, mean=54.8724, std=6.4996
+2026-03-10 02:55:57,132 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:55:57,132 [INFO] Channel 'pressure' updated: count=2300, mean=1013.0689, std=4.2417
+2026-03-10 02:55:57,132 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:55:57,133 [INFO] Channel 'wind_speed' updated: count=2300, mean=10.0, std=3.2636
+2026-03-10 02:55:57,133 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:55:57,295 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 02:55:57,339 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T025556.csv
+2026-03-10 02:55:57,367 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:55:57,367 [INFO] Baseline saved to S3.
+2026-03-10 02:55:57,404 [INFO] Log file synced to S3.
+2026-03-10 02:55:57,436 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T025556_summary.json
+2026-03-10 02:56:57,450 [INFO] Received SNS message type: Notification
+2026-03-10 02:56:57,450 [INFO] New file arrival detected: raw/sensors_20260310T025656.csv — queuing for processing.
+2026-03-10 02:56:57,452 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T025656.csv ---
+2026-03-10 02:56:57,557 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:56:57,663 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:56:57,663 [INFO] Baseline loaded from S3.
+2026-03-10 02:56:57,664 [INFO] Channel 'temperature' updated: count=2400, mean=21.9964, std=1.7813
+2026-03-10 02:56:57,664 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:56:57,665 [INFO] Channel 'humidity' updated: count=2400, mean=54.8684, std=6.5677
+2026-03-10 02:56:57,665 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:56:57,665 [INFO] Channel 'pressure' updated: count=2400, mean=1013.0757, std=4.1954
+2026-03-10 02:56:57,665 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:56:57,666 [INFO] Channel 'wind_speed' updated: count=2400, mean=9.9933, std=3.2601
+2026-03-10 02:56:57,666 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:56:57,829 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 02:56:57,855 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T025656.csv
+2026-03-10 02:56:57,879 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:56:57,879 [INFO] Baseline saved to S3.
+2026-03-10 02:56:57,925 [INFO] Log file synced to S3.
+2026-03-10 02:56:57,953 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T025656_summary.json
+2026-03-10 02:57:57,862 [INFO] Received SNS message type: Notification
+2026-03-10 02:57:57,862 [INFO] New file arrival detected: raw/sensors_20260310T025756.csv — queuing for processing.
+2026-03-10 02:57:57,864 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T025756.csv ---
+2026-03-10 02:57:57,971 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:57:58,077 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:57:58,077 [INFO] Baseline loaded from S3.
+2026-03-10 02:57:58,078 [INFO] Channel 'temperature' updated: count=2500, mean=22.0166, std=1.7872
+2026-03-10 02:57:58,078 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:57:58,078 [INFO] Channel 'humidity' updated: count=2500, mean=54.9153, std=6.6607
+2026-03-10 02:57:58,078 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:57:58,079 [INFO] Channel 'pressure' updated: count=2500, mean=1013.0693, std=4.1632
+2026-03-10 02:57:58,079 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:57:58,079 [INFO] Channel 'wind_speed' updated: count=2500, mean=9.9855, std=3.2467
+2026-03-10 02:57:58,079 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:57:58,242 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 02:57:58,322 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T025756.csv
+2026-03-10 02:57:58,379 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:57:58,379 [INFO] Baseline saved to S3.
+2026-03-10 02:57:58,411 [INFO] Log file synced to S3.
+2026-03-10 02:57:58,437 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T025756_summary.json
+2026-03-10 02:58:57,503 [INFO] Received SNS message type: Notification
+2026-03-10 02:58:57,503 [INFO] New file arrival detected: raw/sensors_20260310T025856.csv — queuing for processing.
+2026-03-10 02:58:57,504 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T025856.csv ---
+2026-03-10 02:58:57,618 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:58:57,725 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:58:57,725 [INFO] Baseline loaded from S3.
+2026-03-10 02:58:57,725 [INFO] Channel 'temperature' updated: count=2600, mean=22.0211, std=1.7982
+2026-03-10 02:58:57,726 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:58:57,726 [INFO] Channel 'humidity' updated: count=2600, mean=54.8957, std=6.6974
+2026-03-10 02:58:57,726 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:58:57,726 [INFO] Channel 'pressure' updated: count=2600, mean=1013.0681, std=4.1409
+2026-03-10 02:58:57,727 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:58:57,727 [INFO] Channel 'wind_speed' updated: count=2600, mean=9.9808, std=3.2193
+2026-03-10 02:58:57,727 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:58:57,890 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 02:58:57,947 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T025856.csv
+2026-03-10 02:58:57,977 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:58:57,977 [INFO] Baseline saved to S3.
+2026-03-10 02:58:58,014 [INFO] Log file synced to S3.
+2026-03-10 02:58:58,044 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T025856_summary.json
+2026-03-10 02:59:57,916 [INFO] Received SNS message type: Notification
+2026-03-10 02:59:57,916 [INFO] New file arrival detected: raw/sensors_20260310T025956.csv — queuing for processing.
+2026-03-10 02:59:57,918 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T025956.csv ---
+2026-03-10 02:59:58,026 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 02:59:58,191 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:59:58,192 [INFO] Baseline loaded from S3.
+2026-03-10 02:59:58,192 [INFO] Channel 'temperature' updated: count=2700, mean=22.0285, std=1.7915
+2026-03-10 02:59:58,192 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 02:59:58,193 [INFO] Channel 'humidity' updated: count=2700, mean=54.8883, std=6.6834
+2026-03-10 02:59:58,193 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 02:59:58,193 [INFO] Channel 'pressure' updated: count=2700, mean=1013.0685, std=4.1322
+2026-03-10 02:59:58,193 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 02:59:58,194 [INFO] Channel 'wind_speed' updated: count=2700, mean=9.9733, std=3.2089
+2026-03-10 02:59:58,194 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 02:59:58,358 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 02:59:58,399 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T025956.csv
+2026-03-10 02:59:58,432 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 02:59:58,433 [INFO] Baseline saved to S3.
+2026-03-10 02:59:58,467 [INFO] Log file synced to S3.
+2026-03-10 02:59:58,498 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T025956_summary.json
+2026-03-10 03:00:58,295 [INFO] Received SNS message type: Notification
+2026-03-10 03:00:58,295 [INFO] New file arrival detected: raw/sensors_20260310T030057.csv — queuing for processing.
+2026-03-10 03:00:58,296 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T030057.csv ---
+2026-03-10 03:00:58,409 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:00:58,526 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:00:58,527 [INFO] Baseline loaded from S3.
+2026-03-10 03:00:58,527 [INFO] Channel 'temperature' updated: count=2800, mean=22.0288, std=1.7826
+2026-03-10 03:00:58,527 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:00:58,528 [INFO] Channel 'humidity' updated: count=2800, mean=54.8538, std=6.6357
+2026-03-10 03:00:58,528 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:00:58,528 [INFO] Channel 'pressure' updated: count=2800, mean=1013.0872, std=4.1598
+2026-03-10 03:00:58,528 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:00:58,529 [INFO] Channel 'wind_speed' updated: count=2800, mean=9.9718, std=3.2627
+2026-03-10 03:00:58,529 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:00:58,694 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 03:00:58,726 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T030057.csv
+2026-03-10 03:00:58,756 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:00:58,756 [INFO] Baseline saved to S3.
+2026-03-10 03:00:58,785 [INFO] Log file synced to S3.
+2026-03-10 03:00:58,812 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T030057_summary.json
+2026-03-10 03:01:58,726 [INFO] Received SNS message type: Notification
+2026-03-10 03:01:58,726 [INFO] New file arrival detected: raw/sensors_20260310T030157.csv — queuing for processing.
+2026-03-10 03:01:58,728 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T030157.csv ---
+2026-03-10 03:01:58,834 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:01:58,973 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:01:58,973 [INFO] Baseline loaded from S3.
+2026-03-10 03:01:58,974 [INFO] Channel 'temperature' updated: count=2900, mean=22.033, std=1.7741
+2026-03-10 03:01:58,974 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:01:58,974 [INFO] Channel 'humidity' updated: count=2900, mean=54.8709, std=6.6188
+2026-03-10 03:01:58,975 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:01:58,975 [INFO] Channel 'pressure' updated: count=2900, mean=1013.0865, std=4.1441
+2026-03-10 03:01:58,975 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:01:58,975 [INFO] Channel 'wind_speed' updated: count=2900, mean=9.9629, std=3.2697
+2026-03-10 03:01:58,976 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:01:59,139 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 03:01:59,174 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T030157.csv
+2026-03-10 03:01:59,214 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:01:59,215 [INFO] Baseline saved to S3.
+2026-03-10 03:01:59,245 [INFO] Log file synced to S3.
+2026-03-10 03:01:59,272 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T030157_summary.json
+2026-03-10 03:02:58,425 [INFO] Received SNS message type: Notification
+2026-03-10 03:02:58,425 [INFO] New file arrival detected: raw/sensors_20260310T030257.csv — queuing for processing.
+2026-03-10 03:02:58,426 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T030257.csv ---
+2026-03-10 03:02:58,536 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:02:58,644 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:02:58,644 [INFO] Baseline loaded from S3.
+2026-03-10 03:02:58,645 [INFO] Channel 'temperature' updated: count=3000, mean=22.0253, std=1.7683
+2026-03-10 03:02:58,645 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:02:58,646 [INFO] Channel 'humidity' updated: count=3000, mean=54.9097, std=6.6297
+2026-03-10 03:02:58,646 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:02:58,646 [INFO] Channel 'pressure' updated: count=3000, mean=1013.0957, std=4.1696
+2026-03-10 03:02:58,646 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:02:58,647 [INFO] Channel 'wind_speed' updated: count=3000, mean=9.9804, std=3.2476
+2026-03-10 03:02:58,647 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:02:58,812 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 03:02:58,844 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T030257.csv
+2026-03-10 03:02:58,876 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:02:58,876 [INFO] Baseline saved to S3.
+2026-03-10 03:02:58,908 [INFO] Log file synced to S3.
+2026-03-10 03:02:58,936 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T030257_summary.json
+2026-03-10 03:03:58,807 [INFO] Received SNS message type: Notification
+2026-03-10 03:03:58,807 [INFO] New file arrival detected: raw/sensors_20260310T030357.csv — queuing for processing.
+2026-03-10 03:03:58,808 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T030357.csv ---
+2026-03-10 03:03:58,919 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:03:59,032 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:03:59,033 [INFO] Baseline loaded from S3.
+2026-03-10 03:03:59,033 [INFO] Channel 'temperature' updated: count=3100, mean=22.0218, std=1.7635
+2026-03-10 03:03:59,033 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:03:59,034 [INFO] Channel 'humidity' updated: count=3100, mean=54.9142, std=6.6969
+2026-03-10 03:03:59,034 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:03:59,035 [INFO] Channel 'pressure' updated: count=3100, mean=1013.1053, std=4.1576
+2026-03-10 03:03:59,035 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:03:59,035 [INFO] Channel 'wind_speed' updated: count=3100, mean=9.9623, std=3.2372
+2026-03-10 03:03:59,035 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:03:59,201 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 03:03:59,245 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T030357.csv
+2026-03-10 03:03:59,279 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:03:59,279 [INFO] Baseline saved to S3.
+2026-03-10 03:03:59,305 [INFO] Log file synced to S3.
+2026-03-10 03:03:59,343 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T030357_summary.json
+2026-03-10 03:04:59,221 [INFO] Received SNS message type: Notification
+2026-03-10 03:04:59,221 [INFO] New file arrival detected: raw/sensors_20260310T030458.csv — queuing for processing.
+2026-03-10 03:04:59,223 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T030458.csv ---
+2026-03-10 03:04:59,332 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:04:59,479 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:04:59,479 [INFO] Baseline loaded from S3.
+2026-03-10 03:04:59,480 [INFO] Channel 'temperature' updated: count=3200, mean=22.0184, std=1.7866
+2026-03-10 03:04:59,480 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:04:59,480 [INFO] Channel 'humidity' updated: count=3200, mean=54.9533, std=6.6581
+2026-03-10 03:04:59,481 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:04:59,481 [INFO] Channel 'pressure' updated: count=3200, mean=1013.1258, std=4.1265
+2026-03-10 03:04:59,481 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:04:59,481 [INFO] Channel 'wind_speed' updated: count=3200, mean=9.9692, std=3.2353
+2026-03-10 03:04:59,482 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:04:59,647 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 03:04:59,688 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T030458.csv
+2026-03-10 03:04:59,719 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:04:59,719 [INFO] Baseline saved to S3.
+2026-03-10 03:04:59,766 [INFO] Log file synced to S3.
+2026-03-10 03:04:59,800 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T030458_summary.json
+2026-03-10 03:05:59,614 [INFO] Received SNS message type: Notification
+2026-03-10 03:05:59,615 [INFO] New file arrival detected: raw/sensors_20260310T030558.csv — queuing for processing.
+2026-03-10 03:05:59,616 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T030558.csv ---
+2026-03-10 03:05:59,734 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:05:59,855 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:05:59,855 [INFO] Baseline loaded from S3.
+2026-03-10 03:05:59,856 [INFO] Channel 'temperature' updated: count=3300, mean=22.0243, std=1.8078
+2026-03-10 03:05:59,856 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:05:59,856 [INFO] Channel 'humidity' updated: count=3300, mean=54.9653, std=6.6131
+2026-03-10 03:05:59,857 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:05:59,857 [INFO] Channel 'pressure' updated: count=3300, mean=1013.1306, std=4.1198
+2026-03-10 03:05:59,857 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:05:59,857 [INFO] Channel 'wind_speed' updated: count=3300, mean=9.9676, std=3.2362
+2026-03-10 03:05:59,858 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:06:00,025 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 03:06:00,086 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T030558.csv
+2026-03-10 03:06:00,124 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:06:00,124 [INFO] Baseline saved to S3.
+2026-03-10 03:06:00,157 [INFO] Log file synced to S3.
+2026-03-10 03:06:00,187 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T030558_summary.json
+2026-03-10 03:06:59,297 [INFO] Received SNS message type: Notification
+2026-03-10 03:06:59,297 [INFO] New file arrival detected: raw/sensors_20260310T030658.csv — queuing for processing.
+2026-03-10 03:06:59,299 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T030658.csv ---
+2026-03-10 03:06:59,403 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:06:59,509 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:06:59,509 [INFO] Baseline loaded from S3.
+2026-03-10 03:06:59,510 [INFO] Channel 'temperature' updated: count=3400, mean=22.0248, std=1.8108
+2026-03-10 03:06:59,510 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:06:59,511 [INFO] Channel 'humidity' updated: count=3400, mean=54.9949, std=6.6275
+2026-03-10 03:06:59,511 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:06:59,511 [INFO] Channel 'pressure' updated: count=3400, mean=1013.1307, std=4.0971
+2026-03-10 03:06:59,511 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:06:59,512 [INFO] Channel 'wind_speed' updated: count=3400, mean=9.9648, std=3.209
+2026-03-10 03:06:59,512 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:06:59,676 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 03:06:59,715 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T030658.csv
+2026-03-10 03:06:59,789 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:06:59,789 [INFO] Baseline saved to S3.
+2026-03-10 03:06:59,830 [INFO] Log file synced to S3.
+2026-03-10 03:06:59,863 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T030658_summary.json
+2026-03-10 03:07:59,825 [INFO] Received SNS message type: Notification
+2026-03-10 03:07:59,825 [INFO] New file arrival detected: raw/sensors_20260310T030758.csv — queuing for processing.
+2026-03-10 03:07:59,827 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T030758.csv ---
+2026-03-10 03:07:59,939 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:08:00,064 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:08:00,064 [INFO] Baseline loaded from S3.
+2026-03-10 03:08:00,066 [INFO] Channel 'temperature' updated: count=3500, mean=22.0314, std=1.816
+2026-03-10 03:08:00,066 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:08:00,067 [INFO] Channel 'humidity' updated: count=3500, mean=55.0318, std=6.6808
+2026-03-10 03:08:00,067 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:08:00,068 [INFO] Channel 'pressure' updated: count=3500, mean=1013.1205, std=4.0761
+2026-03-10 03:08:00,068 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:08:00,069 [INFO] Channel 'wind_speed' updated: count=3500, mean=9.966, std=3.1863
+2026-03-10 03:08:00,069 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:08:00,263 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 03:08:00,293 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T030758.csv
+2026-03-10 03:08:00,328 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:08:00,328 [INFO] Baseline saved to S3.
+2026-03-10 03:08:00,359 [INFO] Log file synced to S3.
+2026-03-10 03:08:00,408 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T030758_summary.json
+2026-03-10 03:09:00,118 [INFO] Received SNS message type: Notification
+2026-03-10 03:09:00,119 [INFO] New file arrival detected: raw/sensors_20260310T030858.csv — queuing for processing.
+2026-03-10 03:09:00,121 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T030858.csv ---
+2026-03-10 03:09:00,236 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:09:00,351 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:09:00,351 [INFO] Baseline loaded from S3.
+2026-03-10 03:09:00,351 [INFO] Channel 'temperature' updated: count=3600, mean=22.0315, std=1.8111
+2026-03-10 03:09:00,352 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:09:00,352 [INFO] Channel 'humidity' updated: count=3600, mean=55.0285, std=6.6827
+2026-03-10 03:09:00,352 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:09:00,353 [INFO] Channel 'pressure' updated: count=3600, mean=1013.1284, std=4.0549
+2026-03-10 03:09:00,353 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:09:00,353 [INFO] Channel 'wind_speed' updated: count=3600, mean=9.9757, std=3.1949
+2026-03-10 03:09:00,353 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:09:00,517 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 03:09:00,552 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T030858.csv
+2026-03-10 03:09:00,582 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:09:00,582 [INFO] Baseline saved to S3.
+2026-03-10 03:09:00,620 [INFO] Log file synced to S3.
+2026-03-10 03:09:00,673 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T030858_summary.json
+2026-03-10 03:10:00,617 [INFO] Received SNS message type: Notification
+2026-03-10 03:10:00,618 [INFO] New file arrival detected: raw/sensors_20260310T030959.csv — queuing for processing.
+2026-03-10 03:10:00,619 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T030959.csv ---
+2026-03-10 03:10:00,735 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:10:00,851 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:10:00,851 [INFO] Baseline loaded from S3.
+2026-03-10 03:10:00,852 [INFO] Channel 'temperature' updated: count=3700, mean=22.0227, std=1.8161
+2026-03-10 03:10:00,852 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:10:00,852 [INFO] Channel 'humidity' updated: count=3700, mean=55.043, std=6.6902
+2026-03-10 03:10:00,852 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:10:00,853 [INFO] Channel 'pressure' updated: count=3700, mean=1013.1301, std=4.0267
+2026-03-10 03:10:00,853 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:10:00,853 [INFO] Channel 'wind_speed' updated: count=3700, mean=9.9592, std=3.2237
+2026-03-10 03:10:00,853 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:10:01,018 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 03:10:01,053 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T030959.csv
+2026-03-10 03:10:01,086 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:10:01,086 [INFO] Baseline saved to S3.
+2026-03-10 03:10:01,123 [INFO] Log file synced to S3.
+2026-03-10 03:10:01,156 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T030959_summary.json
+2026-03-10 03:11:00,262 [INFO] Received SNS message type: Notification
+2026-03-10 03:11:00,263 [INFO] New file arrival detected: raw/sensors_20260310T031059.csv — queuing for processing.
+2026-03-10 03:11:00,264 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T031059.csv ---
+2026-03-10 03:11:00,384 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:11:00,493 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:11:00,493 [INFO] Baseline loaded from S3.
+2026-03-10 03:11:00,494 [INFO] Channel 'temperature' updated: count=3800, mean=22.0178, std=1.8126
+2026-03-10 03:11:00,494 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:11:00,494 [INFO] Channel 'humidity' updated: count=3800, mean=55.0385, std=6.6632
+2026-03-10 03:11:00,494 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:11:00,495 [INFO] Channel 'pressure' updated: count=3800, mean=1013.1266, std=4.0048
+2026-03-10 03:11:00,495 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:11:00,495 [INFO] Channel 'wind_speed' updated: count=3800, mean=9.9734, std=3.2687
+2026-03-10 03:11:00,495 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:11:00,659 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 03:11:00,709 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T031059.csv
+2026-03-10 03:11:00,744 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:11:00,744 [INFO] Baseline saved to S3.
+2026-03-10 03:11:00,790 [INFO] Log file synced to S3.
+2026-03-10 03:11:00,827 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T031059_summary.json
+2026-03-10 03:12:00,674 [INFO] Received SNS message type: Notification
+2026-03-10 03:12:00,675 [INFO] New file arrival detected: raw/sensors_20260310T031159.csv — queuing for processing.
+2026-03-10 03:12:00,676 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T031159.csv ---
+2026-03-10 03:12:00,788 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:12:00,943 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:12:00,943 [INFO] Baseline loaded from S3.
+2026-03-10 03:12:00,944 [INFO] Channel 'temperature' updated: count=3900, mean=22.0087, std=1.8448
+2026-03-10 03:12:00,944 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:12:00,945 [INFO] Channel 'humidity' updated: count=3900, mean=55.049, std=6.6408
+2026-03-10 03:12:00,945 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:12:00,945 [INFO] Channel 'pressure' updated: count=3900, mean=1013.1227, std=3.985
+2026-03-10 03:12:00,945 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:12:00,946 [INFO] Channel 'wind_speed' updated: count=3900, mean=9.9786, std=3.2558
+2026-03-10 03:12:00,946 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:12:01,111 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 03:12:01,143 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T031159.csv
+2026-03-10 03:12:01,192 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:12:01,192 [INFO] Baseline saved to S3.
+2026-03-10 03:12:01,232 [INFO] Log file synced to S3.
+2026-03-10 03:12:01,289 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T031159_summary.json
+2026-03-10 03:13:01,181 [INFO] Received SNS message type: Notification
+2026-03-10 03:13:01,182 [INFO] New file arrival detected: raw/sensors_20260310T031300.csv — queuing for processing.
+2026-03-10 03:13:01,183 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T031300.csv ---
+2026-03-10 03:13:01,294 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:13:01,409 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:13:01,409 [INFO] Baseline loaded from S3.
+2026-03-10 03:13:01,410 [INFO] Channel 'temperature' updated: count=4000, mean=22.014, std=1.8461
+2026-03-10 03:13:01,410 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:13:01,411 [INFO] Channel 'humidity' updated: count=4000, mean=55.056, std=6.66
+2026-03-10 03:13:01,411 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:13:01,411 [INFO] Channel 'pressure' updated: count=4000, mean=1013.1129, std=3.9756
+2026-03-10 03:13:01,411 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:13:01,412 [INFO] Channel 'wind_speed' updated: count=4000, mean=9.9712, std=3.2442
+2026-03-10 03:13:01,412 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:13:01,676 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 03:13:01,725 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T031300.csv
+2026-03-10 03:13:01,771 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:13:01,772 [INFO] Baseline saved to S3.
+2026-03-10 03:13:01,878 [INFO] Log file synced to S3.
+2026-03-10 03:13:01,910 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T031300_summary.json
+2026-03-10 03:14:01,652 [INFO] Received SNS message type: Notification
+2026-03-10 03:14:01,652 [INFO] New file arrival detected: raw/sensors_20260310T031400.csv — queuing for processing.
+2026-03-10 03:14:01,654 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T031400.csv ---
+2026-03-10 03:14:01,941 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:14:02,179 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:14:02,179 [INFO] Baseline loaded from S3.
+2026-03-10 03:14:02,180 [INFO] Channel 'temperature' updated: count=4100, mean=22.01, std=1.8705
+2026-03-10 03:14:02,180 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:14:02,182 [INFO] Channel 'humidity' updated: count=4100, mean=55.0371, std=6.6275
+2026-03-10 03:14:02,183 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:14:02,191 [INFO] Channel 'pressure' updated: count=4100, mean=1013.1213, std=3.9647
+2026-03-10 03:14:02,192 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:14:02,192 [INFO] Channel 'wind_speed' updated: count=4100, mean=9.9837, std=3.229
+2026-03-10 03:14:02,192 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:14:02,474 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 03:14:02,514 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T031400.csv
+2026-03-10 03:14:02,622 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:14:02,622 [INFO] Baseline saved to S3.
+2026-03-10 03:14:02,661 [INFO] Log file synced to S3.
+2026-03-10 03:14:02,692 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T031400_summary.json
+2026-03-10 03:15:01,877 [INFO] Received SNS message type: Notification
+2026-03-10 03:15:01,877 [INFO] New file arrival detected: raw/sensors_20260310T031500.csv — queuing for processing.
+2026-03-10 03:15:01,879 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T031500.csv ---
+2026-03-10 03:15:02,346 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:15:02,530 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:15:02,530 [INFO] Baseline loaded from S3.
+2026-03-10 03:15:02,533 [INFO] Channel 'temperature' updated: count=4200, mean=22.0169, std=1.8744
+2026-03-10 03:15:02,533 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:15:02,534 [INFO] Channel 'humidity' updated: count=4200, mean=55.0148, std=6.6136
+2026-03-10 03:15:02,535 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:15:02,535 [INFO] Channel 'pressure' updated: count=4200, mean=1013.1325, std=3.9941
+2026-03-10 03:15:02,535 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:15:02,536 [INFO] Channel 'wind_speed' updated: count=4200, mean=9.995, std=3.2138
+2026-03-10 03:15:02,536 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:15:02,733 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 03:15:02,765 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T031500.csv
+2026-03-10 03:15:02,816 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:15:02,816 [INFO] Baseline saved to S3.
+2026-03-10 03:15:02,875 [INFO] Log file synced to S3.
+2026-03-10 03:15:02,908 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T031500_summary.json
+2026-03-10 03:16:02,536 [INFO] Received SNS message type: Notification
+2026-03-10 03:16:02,536 [INFO] New file arrival detected: raw/sensors_20260310T031601.csv — queuing for processing.
+2026-03-10 03:16:02,537 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T031601.csv ---
+2026-03-10 03:16:02,644 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:16:02,837 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:16:02,837 [INFO] Baseline loaded from S3.
+2026-03-10 03:16:02,837 [INFO] Channel 'temperature' updated: count=4300, mean=22.0159, std=1.8651
+2026-03-10 03:16:02,838 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:16:02,838 [INFO] Channel 'humidity' updated: count=4300, mean=54.9976, std=6.594
+2026-03-10 03:16:02,838 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:16:02,839 [INFO] Channel 'pressure' updated: count=4300, mean=1013.1401, std=4.0657
+2026-03-10 03:16:02,839 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:16:02,839 [INFO] Channel 'wind_speed' updated: count=4300, mean=9.9985, std=3.2144
+2026-03-10 03:16:02,839 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:16:03,005 [INFO] Detection complete: 7/100 anomalies flagged.
+2026-03-10 03:16:03,040 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T031601.csv
+2026-03-10 03:16:03,075 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:16:03,076 [INFO] Baseline saved to S3.
+2026-03-10 03:16:03,106 [INFO] Log file synced to S3.
+2026-03-10 03:16:03,128 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T031601_summary.json
+2026-03-10 03:17:02,095 [INFO] Received SNS message type: Notification
+2026-03-10 03:17:02,095 [INFO] New file arrival detected: raw/sensors_20260310T031701.csv — queuing for processing.
+2026-03-10 03:17:02,097 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T031701.csv ---
+2026-03-10 03:17:02,228 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:17:02,342 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:17:02,343 [INFO] Baseline loaded from S3.
+2026-03-10 03:17:02,343 [INFO] Channel 'temperature' updated: count=4400, mean=22.0166, std=1.8713
+2026-03-10 03:17:02,343 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:17:02,344 [INFO] Channel 'humidity' updated: count=4400, mean=55.002, std=6.5547
+2026-03-10 03:17:02,344 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:17:02,344 [INFO] Channel 'pressure' updated: count=4400, mean=1013.1262, std=4.0968
+2026-03-10 03:17:02,344 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:17:02,345 [INFO] Channel 'wind_speed' updated: count=4400, mean=10.0078, std=3.2008
+2026-03-10 03:17:02,345 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:17:02,511 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 03:17:02,541 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T031701.csv
+2026-03-10 03:17:02,573 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:17:02,574 [INFO] Baseline saved to S3.
+2026-03-10 03:17:02,604 [INFO] Log file synced to S3.
+2026-03-10 03:17:02,633 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T031701_summary.json
+2026-03-10 03:18:02,623 [INFO] Received SNS message type: Notification
+2026-03-10 03:18:02,623 [INFO] New file arrival detected: raw/sensors_20260310T031801.csv — queuing for processing.
+2026-03-10 03:18:02,625 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T031801.csv ---
+2026-03-10 03:18:02,741 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:18:02,849 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:18:02,849 [INFO] Baseline loaded from S3.
+2026-03-10 03:18:02,849 [INFO] Channel 'temperature' updated: count=4500, mean=22.0198, std=1.8632
+2026-03-10 03:18:02,850 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:18:02,850 [INFO] Channel 'humidity' updated: count=4500, mean=54.9936, std=6.5759
+2026-03-10 03:18:02,850 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:18:02,851 [INFO] Channel 'pressure' updated: count=4500, mean=1013.1344, std=4.0953
+2026-03-10 03:18:02,851 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:18:02,851 [INFO] Channel 'wind_speed' updated: count=4500, mean=10.0073, std=3.2023
+2026-03-10 03:18:02,851 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:18:03,017 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 03:18:03,052 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T031801.csv
+2026-03-10 03:18:03,133 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:18:03,133 [INFO] Baseline saved to S3.
+2026-03-10 03:18:03,181 [INFO] Log file synced to S3.
+2026-03-10 03:18:03,221 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T031801_summary.json
+2026-03-10 03:19:02,966 [INFO] Received SNS message type: Notification
+2026-03-10 03:19:02,966 [INFO] New file arrival detected: raw/sensors_20260310T031901.csv — queuing for processing.
+2026-03-10 03:19:02,967 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T031901.csv ---
+2026-03-10 03:19:03,080 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:19:03,189 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:19:03,189 [INFO] Baseline loaded from S3.
+2026-03-10 03:19:03,190 [INFO] Channel 'temperature' updated: count=4600, mean=22.0256, std=1.861
+2026-03-10 03:19:03,190 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:19:03,190 [INFO] Channel 'humidity' updated: count=4600, mean=54.9901, std=6.5969
+2026-03-10 03:19:03,191 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:19:03,191 [INFO] Channel 'pressure' updated: count=4600, mean=1013.133, std=4.0701
+2026-03-10 03:19:03,191 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:19:03,191 [INFO] Channel 'wind_speed' updated: count=4600, mean=10.0041, std=3.1869
+2026-03-10 03:19:03,192 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:19:03,363 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 03:19:03,400 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T031901.csv
+2026-03-10 03:19:03,428 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:19:03,428 [INFO] Baseline saved to S3.
+2026-03-10 03:19:03,487 [INFO] Log file synced to S3.
+2026-03-10 03:19:03,530 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T031901_summary.json
+2026-03-10 03:20:02,859 [INFO] Received SNS message type: Notification
+2026-03-10 03:20:02,859 [INFO] New file arrival detected: raw/sensors_20260310T032001.csv — queuing for processing.
+2026-03-10 03:20:02,861 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T032001.csv ---
+2026-03-10 03:20:02,980 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:20:03,094 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:20:03,095 [INFO] Baseline loaded from S3.
+2026-03-10 03:20:03,095 [INFO] Channel 'temperature' updated: count=4700, mean=22.0163, std=1.879
+2026-03-10 03:20:03,095 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:20:03,096 [INFO] Channel 'humidity' updated: count=4700, mean=54.9791, std=6.5651
+2026-03-10 03:20:03,096 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:20:03,096 [INFO] Channel 'pressure' updated: count=4700, mean=1013.1371, std=4.0552
+2026-03-10 03:20:03,097 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:20:03,097 [INFO] Channel 'wind_speed' updated: count=4700, mean=10.0127, std=3.2007
+2026-03-10 03:20:03,097 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:20:03,271 [INFO] Detection complete: 7/100 anomalies flagged.
+2026-03-10 03:20:03,306 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T032001.csv
+2026-03-10 03:20:03,335 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:20:03,335 [INFO] Baseline saved to S3.
+2026-03-10 03:20:03,373 [INFO] Log file synced to S3.
+2026-03-10 03:20:03,404 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T032001_summary.json
+2026-03-10 03:21:03,145 [INFO] Received SNS message type: Notification
+2026-03-10 03:21:03,145 [INFO] New file arrival detected: raw/sensors_20260310T032102.csv — queuing for processing.
+2026-03-10 03:21:03,147 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T032102.csv ---
+2026-03-10 03:21:03,253 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:21:03,361 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:21:03,361 [INFO] Baseline loaded from S3.
+2026-03-10 03:21:03,362 [INFO] Channel 'temperature' updated: count=4800, mean=22.0143, std=1.8692
+2026-03-10 03:21:03,362 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:21:03,363 [INFO] Channel 'humidity' updated: count=4800, mean=54.9648, std=6.584
+2026-03-10 03:21:03,363 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:21:03,363 [INFO] Channel 'pressure' updated: count=4800, mean=1013.1305, std=4.0764
+2026-03-10 03:21:03,363 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:21:03,364 [INFO] Channel 'wind_speed' updated: count=4800, mean=10.0114, std=3.1931
+2026-03-10 03:21:03,364 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:21:03,529 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 03:21:03,560 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T032102.csv
+2026-03-10 03:21:03,587 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:21:03,588 [INFO] Baseline saved to S3.
+2026-03-10 03:21:03,618 [INFO] Log file synced to S3.
+2026-03-10 03:21:03,644 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T032102_summary.json
+2026-03-10 03:22:03,645 [INFO] Received SNS message type: Notification
+2026-03-10 03:22:03,645 [INFO] New file arrival detected: raw/sensors_20260310T032202.csv — queuing for processing.
+2026-03-10 03:22:03,647 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T032202.csv ---
+2026-03-10 03:22:03,757 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:22:03,893 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:22:03,893 [INFO] Baseline loaded from S3.
+2026-03-10 03:22:03,893 [INFO] Channel 'temperature' updated: count=4900, mean=22.0116, std=1.8704
+2026-03-10 03:22:03,894 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:22:03,894 [INFO] Channel 'humidity' updated: count=4900, mean=54.9703, std=6.6185
+2026-03-10 03:22:03,894 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:22:03,895 [INFO] Channel 'pressure' updated: count=4900, mean=1013.1398, std=4.056
+2026-03-10 03:22:03,895 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:22:03,895 [INFO] Channel 'wind_speed' updated: count=4900, mean=10.0074, std=3.1889
+2026-03-10 03:22:03,895 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:22:04,064 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 03:22:04,154 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T032202.csv
+2026-03-10 03:22:04,183 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:22:04,183 [INFO] Baseline saved to S3.
+2026-03-10 03:22:04,240 [INFO] Log file synced to S3.
+2026-03-10 03:22:04,267 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T032202_summary.json
+2026-03-10 03:23:04,032 [INFO] Received SNS message type: Notification
+2026-03-10 03:23:04,032 [INFO] New file arrival detected: raw/sensors_20260310T032302.csv — queuing for processing.
+2026-03-10 03:23:04,034 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T032302.csv ---
+2026-03-10 03:23:04,148 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:23:04,261 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:23:04,261 [INFO] Baseline loaded from S3.
+2026-03-10 03:23:04,262 [INFO] Channel 'temperature' updated: count=5000, mean=22.0141, std=1.8803
+2026-03-10 03:23:04,262 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:23:04,263 [INFO] Channel 'humidity' updated: count=5000, mean=54.9546, std=6.6625
+2026-03-10 03:23:04,263 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:23:04,263 [INFO] Channel 'pressure' updated: count=5000, mean=1013.1483, std=4.0374
+2026-03-10 03:23:04,263 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:23:04,264 [INFO] Channel 'wind_speed' updated: count=5000, mean=10.006, std=3.1728
+2026-03-10 03:23:04,264 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:23:04,427 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 03:23:04,510 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T032302.csv
+2026-03-10 03:23:04,542 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:23:04,542 [INFO] Baseline saved to S3.
+2026-03-10 03:23:04,649 [INFO] Log file synced to S3.
+2026-03-10 03:23:04,682 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T032302_summary.json
+2026-03-10 03:24:03,725 [INFO] Received SNS message type: Notification
+2026-03-10 03:24:03,726 [INFO] New file arrival detected: raw/sensors_20260310T032402.csv — queuing for processing.
+2026-03-10 03:24:03,727 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T032402.csv ---
+2026-03-10 03:24:03,837 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:24:03,947 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:24:03,947 [INFO] Baseline loaded from S3.
+2026-03-10 03:24:03,948 [INFO] Channel 'temperature' updated: count=5100, mean=22.0201, std=1.8743
+2026-03-10 03:24:03,948 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:24:03,949 [INFO] Channel 'humidity' updated: count=5100, mean=54.9618, std=6.6269
+2026-03-10 03:24:03,949 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:24:03,949 [INFO] Channel 'pressure' updated: count=5100, mean=1013.1461, std=4.0327
+2026-03-10 03:24:03,949 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:24:03,950 [INFO] Channel 'wind_speed' updated: count=5100, mean=10.0074, std=3.1887
+2026-03-10 03:24:03,950 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:24:04,116 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 03:24:04,147 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T032402.csv
+2026-03-10 03:24:04,177 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:24:04,177 [INFO] Baseline saved to S3.
+2026-03-10 03:24:04,237 [INFO] Log file synced to S3.
+2026-03-10 03:24:04,264 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T032402_summary.json
+2026-03-10 03:25:04,210 [INFO] Received SNS message type: Notification
+2026-03-10 03:25:04,211 [INFO] New file arrival detected: raw/sensors_20260310T032502.csv — queuing for processing.
+2026-03-10 03:25:04,212 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T032502.csv ---
+2026-03-10 03:25:04,322 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:25:04,433 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:25:04,433 [INFO] Baseline loaded from S3.
+2026-03-10 03:25:04,434 [INFO] Channel 'temperature' updated: count=5200, mean=22.0082, std=1.8865
+2026-03-10 03:25:04,434 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:25:04,434 [INFO] Channel 'humidity' updated: count=5200, mean=54.9619, std=6.6117
+2026-03-10 03:25:04,434 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:25:04,435 [INFO] Channel 'pressure' updated: count=5200, mean=1013.1373, std=4.0219
+2026-03-10 03:25:04,435 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:25:04,435 [INFO] Channel 'wind_speed' updated: count=5200, mean=10.0126, std=3.1813
+2026-03-10 03:25:04,435 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:25:04,599 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 03:25:04,641 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T032502.csv
+2026-03-10 03:25:04,677 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:25:04,677 [INFO] Baseline saved to S3.
+2026-03-10 03:25:04,728 [INFO] Log file synced to S3.
+2026-03-10 03:25:04,760 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T032502_summary.json
+2026-03-10 03:26:04,642 [INFO] Received SNS message type: Notification
+2026-03-10 03:26:04,642 [INFO] New file arrival detected: raw/sensors_20260310T032603.csv — queuing for processing.
+2026-03-10 03:26:04,644 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T032603.csv ---
+2026-03-10 03:26:04,757 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:26:04,865 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:26:04,865 [INFO] Baseline loaded from S3.
+2026-03-10 03:26:04,866 [INFO] Channel 'temperature' updated: count=5300, mean=22.0171, std=1.9005
+2026-03-10 03:26:04,866 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:26:04,867 [INFO] Channel 'humidity' updated: count=5300, mean=54.9613, std=6.6091
+2026-03-10 03:26:04,867 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:26:04,867 [INFO] Channel 'pressure' updated: count=5300, mean=1013.1373, std=4.0093
+2026-03-10 03:26:04,867 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:26:04,868 [INFO] Channel 'wind_speed' updated: count=5300, mean=10.0015, std=3.197
+2026-03-10 03:26:04,868 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:26:05,032 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 03:26:05,069 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T032603.csv
+2026-03-10 03:26:05,099 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:26:05,099 [INFO] Baseline saved to S3.
+2026-03-10 03:26:05,134 [INFO] Log file synced to S3.
+2026-03-10 03:26:05,164 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T032603_summary.json
+2026-03-10 03:27:04,824 [INFO] Received SNS message type: Notification
+2026-03-10 03:27:04,824 [INFO] New file arrival detected: raw/sensors_20260310T032703.csv — queuing for processing.
+2026-03-10 03:27:04,826 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T032703.csv ---
+2026-03-10 03:27:04,935 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:27:05,046 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:27:05,046 [INFO] Baseline loaded from S3.
+2026-03-10 03:27:05,047 [INFO] Channel 'temperature' updated: count=5400, mean=22.0212, std=1.8949
+2026-03-10 03:27:05,047 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:27:05,047 [INFO] Channel 'humidity' updated: count=5400, mean=54.9752, std=6.6065
+2026-03-10 03:27:05,047 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:27:05,048 [INFO] Channel 'pressure' updated: count=5400, mean=1013.1319, std=4.0162
+2026-03-10 03:27:05,048 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:27:05,048 [INFO] Channel 'wind_speed' updated: count=5400, mean=10.0036, std=3.2037
+2026-03-10 03:27:05,048 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:27:05,212 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 03:27:05,248 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T032703.csv
+2026-03-10 03:27:05,277 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:27:05,277 [INFO] Baseline saved to S3.
+2026-03-10 03:27:05,371 [INFO] Log file synced to S3.
+2026-03-10 03:27:05,400 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T032703_summary.json
+2026-03-10 03:28:04,551 [INFO] Received SNS message type: Notification
+2026-03-10 03:28:04,551 [INFO] New file arrival detected: raw/sensors_20260310T032803.csv — queuing for processing.
+2026-03-10 03:28:04,552 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T032803.csv ---
+2026-03-10 03:28:04,661 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:28:04,782 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:28:04,782 [INFO] Baseline loaded from S3.
+2026-03-10 03:28:04,783 [INFO] Channel 'temperature' updated: count=5500, mean=22.0209, std=1.894
+2026-03-10 03:28:04,783 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:28:04,783 [INFO] Channel 'humidity' updated: count=5500, mean=54.9626, std=6.5902
+2026-03-10 03:28:04,783 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:28:04,784 [INFO] Channel 'pressure' updated: count=5500, mean=1013.1339, std=3.9974
+2026-03-10 03:28:04,784 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:28:04,784 [INFO] Channel 'wind_speed' updated: count=5500, mean=9.9954, std=3.2162
+2026-03-10 03:28:04,784 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:28:04,949 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 03:28:04,981 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T032803.csv
+2026-03-10 03:28:05,015 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:28:05,015 [INFO] Baseline saved to S3.
+2026-03-10 03:28:05,068 [INFO] Log file synced to S3.
+2026-03-10 03:28:05,097 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T032803_summary.json
+2026-03-10 03:29:04,897 [INFO] Received SNS message type: Notification
+2026-03-10 03:29:04,897 [INFO] New file arrival detected: raw/sensors_20260310T032903.csv — queuing for processing.
+2026-03-10 03:29:04,899 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T032903.csv ---
+2026-03-10 03:29:05,007 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:29:05,116 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:29:05,117 [INFO] Baseline loaded from S3.
+2026-03-10 03:29:05,117 [INFO] Channel 'temperature' updated: count=5600, mean=22.0231, std=1.8869
+2026-03-10 03:29:05,117 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:29:05,118 [INFO] Channel 'humidity' updated: count=5600, mean=54.9945, std=6.6172
+2026-03-10 03:29:05,118 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:29:05,119 [INFO] Channel 'pressure' updated: count=5600, mean=1013.1324, std=3.9861
+2026-03-10 03:29:05,119 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:29:05,119 [INFO] Channel 'wind_speed' updated: count=5600, mean=10.0027, std=3.2128
+2026-03-10 03:29:05,119 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:29:05,291 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 03:29:05,324 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T032903.csv
+2026-03-10 03:29:05,353 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:29:05,353 [INFO] Baseline saved to S3.
+2026-03-10 03:29:05,410 [INFO] Log file synced to S3.
+2026-03-10 03:29:05,442 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T032903_summary.json
+2026-03-10 03:30:05,588 [INFO] Received SNS message type: Notification
+2026-03-10 03:30:05,588 [INFO] New file arrival detected: raw/sensors_20260310T033004.csv — queuing for processing.
+2026-03-10 03:30:05,590 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T033004.csv ---
+2026-03-10 03:30:05,705 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:30:05,816 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:30:05,816 [INFO] Baseline loaded from S3.
+2026-03-10 03:30:05,817 [INFO] Channel 'temperature' updated: count=5700, mean=22.0205, std=1.8995
+2026-03-10 03:30:05,817 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:30:05,817 [INFO] Channel 'humidity' updated: count=5700, mean=54.9915, std=6.628
+2026-03-10 03:30:05,817 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:30:05,818 [INFO] Channel 'pressure' updated: count=5700, mean=1013.1321, std=3.9753
+2026-03-10 03:30:05,818 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:30:05,818 [INFO] Channel 'wind_speed' updated: count=5700, mean=10.0033, std=3.2055
+2026-03-10 03:30:05,819 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:30:05,984 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 03:30:06,015 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T033004.csv
+2026-03-10 03:30:06,048 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:30:06,049 [INFO] Baseline saved to S3.
+2026-03-10 03:30:06,124 [INFO] Log file synced to S3.
+2026-03-10 03:30:06,154 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T033004_summary.json
+2026-03-10 03:31:05,964 [INFO] Received SNS message type: Notification
+2026-03-10 03:31:05,964 [INFO] New file arrival detected: raw/sensors_20260310T033104.csv — queuing for processing.
+2026-03-10 03:31:05,966 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T033104.csv ---
+2026-03-10 03:31:06,074 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:31:06,180 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:31:06,181 [INFO] Baseline loaded from S3.
+2026-03-10 03:31:06,181 [INFO] Channel 'temperature' updated: count=5800, mean=22.0185, std=1.8932
+2026-03-10 03:31:06,181 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:31:06,182 [INFO] Channel 'humidity' updated: count=5800, mean=55.006, std=6.6368
+2026-03-10 03:31:06,182 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:31:06,182 [INFO] Channel 'pressure' updated: count=5800, mean=1013.128, std=3.9679
+2026-03-10 03:31:06,183 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:31:06,183 [INFO] Channel 'wind_speed' updated: count=5800, mean=10.004, std=3.2019
+2026-03-10 03:31:06,183 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:31:06,347 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 03:31:06,392 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T033104.csv
+2026-03-10 03:31:06,430 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:31:06,430 [INFO] Baseline saved to S3.
+2026-03-10 03:31:06,498 [INFO] Log file synced to S3.
+2026-03-10 03:31:06,530 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T033104_summary.json
+2026-03-10 03:32:06,211 [INFO] Received SNS message type: Notification
+2026-03-10 03:32:06,211 [INFO] New file arrival detected: raw/sensors_20260310T033204.csv — queuing for processing.
+2026-03-10 03:32:06,213 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T033204.csv ---
+2026-03-10 03:32:06,320 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:32:06,424 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:32:06,424 [INFO] Baseline loaded from S3.
+2026-03-10 03:32:06,425 [INFO] Channel 'temperature' updated: count=5900, mean=22.0181, std=1.8859
+2026-03-10 03:32:06,425 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:32:06,425 [INFO] Channel 'humidity' updated: count=5900, mean=55.001, std=6.6847
+2026-03-10 03:32:06,425 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:32:06,426 [INFO] Channel 'pressure' updated: count=5900, mean=1013.1181, std=3.9585
+2026-03-10 03:32:06,426 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:32:06,426 [INFO] Channel 'wind_speed' updated: count=5900, mean=10.0053, std=3.1982
+2026-03-10 03:32:06,426 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:32:06,591 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 03:32:06,625 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T033204.csv
+2026-03-10 03:32:06,653 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:32:06,653 [INFO] Baseline saved to S3.
+2026-03-10 03:32:06,682 [INFO] Log file synced to S3.
+2026-03-10 03:32:06,710 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T033204_summary.json
+2026-03-10 03:33:05,832 [INFO] Received SNS message type: Notification
+2026-03-10 03:33:05,833 [INFO] New file arrival detected: raw/sensors_20260310T033305.csv — queuing for processing.
+2026-03-10 03:33:05,834 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T033305.csv ---
+2026-03-10 03:33:05,944 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:33:06,062 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:33:06,062 [INFO] Baseline loaded from S3.
+2026-03-10 03:33:06,062 [INFO] Channel 'temperature' updated: count=6000, mean=22.0198, std=1.885
+2026-03-10 03:33:06,063 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:33:06,063 [INFO] Channel 'humidity' updated: count=6000, mean=55.0105, std=6.6585
+2026-03-10 03:33:06,063 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:33:06,063 [INFO] Channel 'pressure' updated: count=6000, mean=1013.1103, std=3.9502
+2026-03-10 03:33:06,064 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:33:06,064 [INFO] Channel 'wind_speed' updated: count=6000, mean=10.0061, std=3.2178
+2026-03-10 03:33:06,064 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:33:06,227 [INFO] Detection complete: 7/100 anomalies flagged.
+2026-03-10 03:33:06,264 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T033305.csv
+2026-03-10 03:33:06,295 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:33:06,295 [INFO] Baseline saved to S3.
+2026-03-10 03:33:06,351 [INFO] Log file synced to S3.
+2026-03-10 03:33:06,385 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T033305_summary.json
+2026-03-10 03:34:06,407 [INFO] Received SNS message type: Notification
+2026-03-10 03:34:06,407 [INFO] New file arrival detected: raw/sensors_20260310T033405.csv — queuing for processing.
+2026-03-10 03:34:06,408 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T033405.csv ---
+2026-03-10 03:34:06,513 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:34:06,639 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:34:06,640 [INFO] Baseline loaded from S3.
+2026-03-10 03:34:06,640 [INFO] Channel 'temperature' updated: count=6100, mean=22.0175, std=1.8907
+2026-03-10 03:34:06,640 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:34:06,641 [INFO] Channel 'humidity' updated: count=6100, mean=55.0145, std=6.6432
+2026-03-10 03:34:06,641 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:34:06,641 [INFO] Channel 'pressure' updated: count=6100, mean=1013.1053, std=3.9379
+2026-03-10 03:34:06,641 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:34:06,642 [INFO] Channel 'wind_speed' updated: count=6100, mean=9.9981, std=3.2226
+2026-03-10 03:34:06,642 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:34:06,806 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 03:34:06,839 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T033405.csv
+2026-03-10 03:34:06,871 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:34:06,872 [INFO] Baseline saved to S3.
+2026-03-10 03:34:06,909 [INFO] Log file synced to S3.
+2026-03-10 03:34:06,941 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T033405_summary.json
+2026-03-10 03:35:06,688 [INFO] Received SNS message type: Notification
+2026-03-10 03:35:06,688 [INFO] New file arrival detected: raw/sensors_20260310T033505.csv — queuing for processing.
+2026-03-10 03:35:06,689 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T033505.csv ---
+2026-03-10 03:35:06,802 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:35:06,954 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:35:06,954 [INFO] Baseline loaded from S3.
+2026-03-10 03:35:06,955 [INFO] Channel 'temperature' updated: count=6200, mean=22.017, std=1.8853
+2026-03-10 03:35:06,955 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:35:06,956 [INFO] Channel 'humidity' updated: count=6200, mean=55.0072, std=6.7309
+2026-03-10 03:35:06,956 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:35:06,956 [INFO] Channel 'pressure' updated: count=6200, mean=1013.108, std=3.9362
+2026-03-10 03:35:06,956 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:35:06,957 [INFO] Channel 'wind_speed' updated: count=6200, mean=9.9981, std=3.2099
+2026-03-10 03:35:06,957 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:35:07,121 [INFO] Detection complete: 6/100 anomalies flagged.
+2026-03-10 03:35:07,155 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T033505.csv
+2026-03-10 03:35:07,185 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:35:07,186 [INFO] Baseline saved to S3.
+2026-03-10 03:35:07,221 [INFO] Log file synced to S3.
+2026-03-10 03:35:07,254 [INFO] Summary written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T033505_summary.json
+2026-03-10 03:36:07,175 [INFO] Received SNS message type: Notification
+2026-03-10 03:36:07,175 [INFO] New file arrival detected: raw/sensors_20260310T033605.csv — queuing for processing.
+2026-03-10 03:36:07,176 [INFO] --- New file arrival: s3://ds5220-anomaly-dp1/raw/sensors_20260310T033605.csv ---
+2026-03-10 03:36:07,282 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 03:36:07,386 [INFO] Baseline loaded from s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:36:07,386 [INFO] Baseline loaded from S3.
+2026-03-10 03:36:07,387 [INFO] Channel 'temperature' updated: count=6300, mean=22.0191, std=1.8789
+2026-03-10 03:36:07,387 [INFO] Baseline updated for channel 'temperature' with 100 values.
+2026-03-10 03:36:07,387 [INFO] Channel 'humidity' updated: count=6300, mean=55.0075, std=6.7545
+2026-03-10 03:36:07,387 [INFO] Baseline updated for channel 'humidity' with 100 values.
+2026-03-10 03:36:07,388 [INFO] Channel 'pressure' updated: count=6300, mean=1013.112, std=3.9384
+2026-03-10 03:36:07,388 [INFO] Baseline updated for channel 'pressure' with 100 values.
+2026-03-10 03:36:07,388 [INFO] Channel 'wind_speed' updated: count=6300, mean=9.9995, std=3.1999
+2026-03-10 03:36:07,388 [INFO] Baseline updated for channel 'wind_speed' with 100 values.
+2026-03-10 03:36:07,552 [INFO] Detection complete: 5/100 anomalies flagged.
+2026-03-10 03:36:07,583 [INFO] Scored file written to s3://ds5220-anomaly-dp1/processed/sensors_20260310T033605.csv
+2026-03-10 03:36:07,611 [INFO] Baseline saved to s3://ds5220-anomaly-dp1/state/baseline.json
+2026-03-10 03:36:07,611 [INFO] Baseline saved to S3.
